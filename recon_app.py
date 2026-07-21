@@ -750,4 +750,4 @@ if __name__ == '__main__':
     print("  dnspython    :", "✓" if HAS_DNS      else "✗  pip install dnspython")
     print("  requests     :", "✓" if HAS_REQUESTS else "✗  pip install requests")
     print("\n  Running on http://localhost:5009\n")
-    app.run(debug=True, host='0.0.0.0', port=5009, threaded=True)
+    app.run(debug=True, host='127.0.0.1', port=5009, threaded=True)

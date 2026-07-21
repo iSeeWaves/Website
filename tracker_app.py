@@ -152,4 +152,4 @@ if __name__ == '__main__':
     print("  Running on http://localhost:5001")
     print("  Endpoint: POST /api/tracker")
     print("  Health  : GET  /api/health\n")
-    app.run(debug=True, host='0.0.0.0', port=5001, threaded=True)
+    app.run(debug=True, host='127.0.0.1', port=5001, threaded=True)

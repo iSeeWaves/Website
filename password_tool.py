@@ -382,4 +382,4 @@ if __name__ == "__main__":
     print("  iSeeWaves — Password Tool Backend")
     print("  Running on  http://localhost:5003")
     print("=" * 50)
-    app.run(debug=False, host="0.0.0.0", port=5003, threaded=True)
+    app.run(debug=False, host="127.0.0.1", port=5003, threaded=True)
