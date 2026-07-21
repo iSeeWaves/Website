@@ -28,7 +28,7 @@ except ImportError:
     HAS_REQUESTS = False
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:3000"])  # restrict to frontend origin
 
 
 # ─────────────────────────────────────────────

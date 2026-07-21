@@ -1,0 +1,6 @@
+# Requirements for the standalone security tools:
+# File_Scanner.py, recon_app.py, password_tool.py, tracker_app.py
+flask
+flask-cors
+requests
+python-dotenv

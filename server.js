@@ -1,4 +1,5 @@
 console.log("SERVER STARTED");
+require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors');
@@ -10,9 +11,9 @@ app.use(express.json());
 
 
 const initConn = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '',
 });
 
 initConn.connect((err) => {
@@ -33,9 +34,9 @@ initConn.connect((err) => {
 
        
             const db = mysql.createConnection({
-                host: 'localhost',
-                user: 'root',
-                password: '',
+                host: process.env.DB_HOST || 'localhost',
+                user: process.env.DB_USER || 'root',
+                password: process.env.DB_PASSWORD || '',
                 database: 'contactdb',
             });
 

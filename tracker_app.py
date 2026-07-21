@@ -16,7 +16,7 @@ import re
 import requests as req_lib
 
 app = Flask(__name__)
-CORS(app)   # React (localhost:3000) 
+CORS(app, origins=["http://localhost:3000"])   # React (localhost:3000)
 
 # ─────────────────────────────────────────────
 # HELPERS

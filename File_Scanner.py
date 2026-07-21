@@ -12,14 +12,17 @@ import requests
 from pathlib import Path
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from dotenv import load_dotenv
+
+load_dotenv()  # Reads .env file and loads VT_API_KEY / IPINFO_TOKEN into environment
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["http://localhost:3000"])  # restrict to frontend origin
 
 # ─────────────────────────────────────────
 #  CONFIG
 # ─────────────────────────────────────────
-VT_API_KEY   = "14f3c76995c38ae7a4cd3702cd4c37dbee775d63ce1497b48cd6b5cdb24ffff2"      # VirusTotal API key (optional)
+VT_API_KEY   = os.environ.get("VT_API_KEY", "")      # VirusTotal API key (optional) — set via .env, never hardcode
 IPINFO_TOKEN = os.environ.get("IPINFO_TOKEN", "")     # ipinfo.io token (optional, free tier works without)
 MAX_FILE_MB  = 32
 MAX_FILE_BYTES = MAX_FILE_MB * 1024 * 1024
