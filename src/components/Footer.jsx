@@ -12,8 +12,9 @@ import linkedinIcon from '../assets/images/icons/linkedin.png';
 const Footer = () => {
   return (
     <footer style={{
-      background: 'linear-gradient(135deg, #307075 0%, #2a5f63 100%)',
-      color: '#f3f7ec',
+      background: 'linear-gradient(135deg, #060907 0%, #0c1512 100%)',
+      borderTop: '1px solid rgba(116,195,186,0.25)',
+      color: '#e8f5f3',
       padding: '60px 0 20px 0',
       position: 'relative',
       overflow: 'hidden',
@@ -22,7 +23,7 @@ const Footer = () => {
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0,
         height: '1px',
-        background: 'linear-gradient(90deg, transparent 0%, #f3f7ec 50%, transparent 100%)',
+        background: 'linear-gradient(90deg, transparent 0%, #74C3BA 50%, transparent 100%)', boxShadow: '0 0 12px rgba(116,195,186,0.6)',
       }} />
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
@@ -39,7 +40,7 @@ const Footer = () => {
             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '15px' }}>
               <div style={{
                 width: '50px', height: '50px',
-                background: '#f3f7ec',
+                background: '#0e1a17', border: '1px solid rgba(116,195,186,0.4)',
                 borderRadius: '12px',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
@@ -50,7 +51,7 @@ const Footer = () => {
               <span style={{ fontSize: '28px', fontWeight: '700', letterSpacing: '-0.5px' }}>iSeeWaves</span>
             </div>
 
-            <p style={{ color: '#b8d4d6', fontSize: '16px', lineHeight: '1.6', marginBottom: '20px' }}>
+            <p style={{ color: 'rgba(232,245,243,0.65)', fontSize: '16px', lineHeight: '1.6', marginBottom: '20px' }}>
               Protecting your digital assets with advanced cybersecurity solutions and cutting-edge threat detection technologies.
             </p>
 
@@ -104,22 +105,22 @@ const Footer = () => {
                   title={social.alt}
                   style={{
                     width: '45px', height: '45px',
-                    background: 'rgba(243,247,236,0.1)',
-                    border: '2px solid rgba(243,247,236,0.2)',
+                    background: 'rgba(116,195,186,0.08)',
+                    border: '2px solid rgba(116,195,186,0.25)',
                     borderRadius: '12px',
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
                     textDecoration: 'none',
                     transition: 'all 0.3s ease',
                   }}
                   onMouseEnter={e => {
-                    e.currentTarget.style.borderColor = '#f3f7ec';
-                    e.currentTarget.style.background = 'rgba(243,247,236,0.15)';
+                    e.currentTarget.style.borderColor = '#74C3BA';
+                    e.currentTarget.style.background = 'rgba(116,195,186,0.18)';
                     e.currentTarget.style.transform = 'translateY(-3px)';
-                    e.currentTarget.style.boxShadow = '0 8px 25px rgba(0,0,0,0.3)';
+                    e.currentTarget.style.boxShadow = '0 8px 25px rgba(116,195,186,0.35)';
                   }}
                   onMouseLeave={e => {
-                    e.currentTarget.style.borderColor = 'rgba(243,247,236,0.2)';
-                    e.currentTarget.style.background = 'rgba(243,247,236,0.1)';
+                    e.currentTarget.style.borderColor = 'rgba(116,195,186,0.25)';
+                    e.currentTarget.style.background = 'rgba(116,195,186,0.08)';
                     e.currentTarget.style.transform = 'translateY(0)';
                     e.currentTarget.style.boxShadow = 'none';
                   }}
@@ -132,12 +133,12 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div style={{ borderTop: '1px solid rgba(243,247,236,0.1)', paddingTop: '30px' }}>
+        <div style={{ borderTop: '1px solid rgba(116,195,186,0.15)', paddingTop: '30px' }}>
           <div style={{
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',
             flexWrap: 'wrap', gap: '20px',
           }}>
-            <span style={{ color: '#b8d4d6', fontSize: '14px' }}>
+            <span style={{ color: 'rgba(232,245,243,0.65)', fontSize: '14px' }}>
               © 2025 iSeeWaves. All rights reserved.
             </span>
             <div style={{ display: 'flex', gap: '30px' }}>
@@ -149,9 +150,9 @@ const Footer = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  style={{ color: '#b8d4d6', textDecoration: 'none', fontSize: '14px', transition: 'color 0.3s' }}
-                  onMouseEnter={e => e.target.style.color = '#f3f7ec'}
-                  onMouseLeave={e => e.target.style.color = '#b8d4d6'}
+                  style={{ color: 'rgba(232,245,243,0.65)', textDecoration: 'none', fontSize: '14px', transition: 'color 0.3s' }}
+                  onMouseEnter={e => e.target.style.color = '#74C3BA'; e.target.style.textShadow = '0 0 8px rgba(116,195,186,0.6)'}
+                  onMouseLeave={e => e.target.style.color = 'rgba(232,245,243,0.65)'; e.target.style.textShadow = 'none'}
                 >
                   {link.label}
                 </a>
@@ -172,9 +173,9 @@ const FooterSection = ({ title, links }) => (
         <li key={link.label}>
           <a
             href={link.href}
-            style={{ color: '#b8d4d6', textDecoration: 'none', fontSize: '15px', display: 'inline-block', transition: 'all 0.3s ease' }}
-            onMouseEnter={e => { e.target.style.color = '#f3f7ec'; e.target.style.transform = 'translateX(8px)'; }}
-            onMouseLeave={e => { e.target.style.color = '#b8d4d6'; e.target.style.transform = 'translateX(0)'; }}
+            style={{ color: 'rgba(232,245,243,0.65)', textDecoration: 'none', fontSize: '15px', display: 'inline-block', transition: 'all 0.3s ease' }}
+            onMouseEnter={e => { e.target.style.color = '#74C3BA'; e.target.style.textShadow = '0 0 8px rgba(116,195,186,0.6)'; e.target.style.transform = 'translateX(8px)'; }}
+            onMouseLeave={e => { e.target.style.color = 'rgba(232,245,243,0.65)'; e.target.style.textShadow = 'none'; e.target.style.transform = 'translateX(0)'; }}
           >
             {link.label}
           </a>
@@ -186,11 +187,11 @@ const FooterSection = ({ title, links }) => (
 
 const SectionHeading = ({ title }) => (
   <div style={{ marginBottom: '20px', position: 'relative', paddingBottom: '10px' }}>
-    <h3 style={{ color: '#f3f7ec', fontSize: '18px', fontWeight: '600', margin: 0 }}>{title}</h3>
+    <h3 style={{ color: '#e8f5f3', fontSize: '18px', fontWeight: '600', margin: 0 }}>{title}</h3>
     <div style={{
       position: 'absolute', bottom: 0, left: 0,
       width: '30px', height: '2px',
-      background: '#f3f7ec', borderRadius: '2px',
+      background: '#0e1a17', border: '1px solid rgba(116,195,186,0.4)', borderRadius: '2px',
     }} />
   </div>
 );

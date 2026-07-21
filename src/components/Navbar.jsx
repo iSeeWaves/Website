@@ -13,13 +13,16 @@ const Navbar = () => {
 
   return (
     <header style={{
-      backgroundColor: '#306F74',
+      backgroundColor: '#0a0f0d',
+      borderBottom: '1px solid rgba(116,195,186,0.25)',
       padding: '0px 50px',
       position: 'fixed',
       width: '100%',
       top: 0,
       zIndex: 1000,
-      boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.2)' : '0 2px 10px rgba(0,0,0,0.2)',
+      boxShadow: scrolled
+        ? '0 2px 24px rgba(116,195,186,0.15)'
+        : '0 2px 10px rgba(0,0,0,0.4)',
     }}>
       <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         {/* Logo */}
@@ -27,7 +30,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="iSeeWaves Logo"
-            style={{ height: '90px', borderRadius: '8px' }}
+            style={{ height: '90px', borderRadius: '8px', filter: 'drop-shadow(0 0 8px rgba(116,195,186,0.35))' }}
           />
         </div>
 
@@ -38,7 +41,7 @@ const Navbar = () => {
             display: 'none',
             background: 'none',
             border: 'none',
-            color: '#F4F7EC',
+            color: '#74C3BA',
             fontSize: '24px',
             cursor: 'pointer',
           }}
@@ -68,18 +71,20 @@ const Navbar = () => {
                 href={item.href}
                 style={{
                   textDecoration: 'none',
-                  color: '#F4F7EC',
+                  color: 'rgba(232,245,243,0.8)',
                   fontSize: '16px',
                   fontWeight: 'bold',
-                  transition: 'color 0.3s, border-bottom 0.3s',
+                  transition: 'color 0.3s, text-shadow 0.3s, border-bottom 0.3s',
                   paddingBottom: '3px',
                 }}
                 onMouseEnter={e => {
-                  e.target.style.color = '#FFFFFF';
-                  e.target.style.borderBottom = '2px solid #FFFFFF';
+                  e.target.style.color = '#74C3BA';
+                  e.target.style.textShadow = '0 0 10px rgba(116,195,186,0.7)';
+                  e.target.style.borderBottom = '2px solid #74C3BA';
                 }}
                 onMouseLeave={e => {
-                  e.target.style.color = '#F4F7EC';
+                  e.target.style.color = 'rgba(232,245,243,0.8)';
+                  e.target.style.textShadow = 'none';
                   e.target.style.borderBottom = 'none';
                 }}
               >
