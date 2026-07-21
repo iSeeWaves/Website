@@ -151,8 +151,8 @@ const Footer = () => {
                   key={link.label}
                   href={link.href}
                   style={{ color: 'rgba(232,245,243,0.65)', textDecoration: 'none', fontSize: '14px', transition: 'color 0.3s' }}
-                  onMouseEnter={e => e.target.style.color = '#74C3BA'; e.target.style.textShadow = '0 0 8px rgba(116,195,186,0.6)'}
-                  onMouseLeave={e => e.target.style.color = 'rgba(232,245,243,0.65)'; e.target.style.textShadow = 'none'}
+                  onMouseEnter={e => { e.target.style.color = '#74C3BA'; e.target.style.textShadow = '0 0 8px rgba(116,195,186,0.6)'; }}
+                  onMouseLeave={e => { e.target.style.color = 'rgba(232,245,243,0.65)'; e.target.style.textShadow = 'none'; }}
                 >
                   {link.label}
                 </a>
